@@ -31,6 +31,4 @@ No backend, no dependencies, and fully GitHub Pages–ready.
 
 ## 🚀 How to Run
 
-1. Clone or download this repo:
-   ```bash
-   git clone https://github.com/<your-username>/minimal-chat.git
+1. Clone or download this repo
