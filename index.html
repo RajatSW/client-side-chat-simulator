@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minimal Chat — Demo</title>
+
+  <!-- System-like font for a clean Apple-ish look -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">💬</div>
+        <div>
+          <h1>Minimal Chat</h1>
+          <p class="subtitle">Client-only demo • GitHub Pages friendly</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="changeNameBtn" class="link-btn" aria-label="Change display name">Change name</button>
+        <button id="themeToggle" class="ghost-btn" aria-label="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <main class="chat-panel" role="main">
+      <section id="chatBox" class="chat-box" aria-live="polite" aria-label="Messages">
+        <!-- messages render here -->
+      </section>
+
+      <form id="composer" class="composer" autocomplete="off" aria-label="Message composer">
+        <div class="input-wrap">
+          <button id="emojiBtn" type="button" class="emoji-btn" title="Emoji">😊</button>
+          <input id="messageInput" class="input" type="text" placeholder="Say something..." aria-label="Message" />
+        </div>
+        <button id="sendBtn" class="send-btn" type="submit" aria-label="Send message">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <span id="status" class="status">Demo • simulated users</span>
+      <span id="newIndicator" class="new-indicator hidden">New messages • click to jump</span>
+    </footer>
+  </div>
+
+  <!-- Username modal -->
+  <div id="usernameModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="usernameTitle" aria-hidden="true">
+    <div class="modal-card" role="document">
+      <h2 id="usernameTitle">Welcome — pick a display name</h2>
+      <p class="muted">Your name is stored locally for this browser only.</p>
+      <input id="usernameInput" class="username-input" type="text" maxlength="20" placeholder="e.g. Alex" aria-label="Display name" />
+      <div class="modal-actions">
+        <button id="startBtn" class="primary-btn">Join</button>
+      </div>
+      <p class="hint">You can change this later via <strong>Change name</strong>.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
